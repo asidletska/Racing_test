@@ -7412,6 +7412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1093478482}
   - component: {fileID: 1093478481}
+  - component: {fileID: 1093478483}
   m_Layer: 0
   m_Name: FinishTriggerZone
   m_TagString: Untagged
@@ -7438,7 +7439,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 3.88, z: 19.35}
+  m_Size: {x: 6.31, y: 3.88, z: 19.35}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1093478482
 Transform:
@@ -7449,12 +7450,24 @@ Transform:
   m_GameObject: {fileID: 1093478480}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.14107406, z: 0, w: 0.9899991}
-  m_LocalPosition: {x: 398.42, y: 21.67, z: 81.85}
+  m_LocalPosition: {x: 401.7, y: 21.67, z: 82.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -16.22, z: 0}
+--- !u!114 &1093478483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093478480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2589ad7f1a012458dab20dd5b9646072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1156046357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1248598967819147742, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
@@ -9148,6 +9161,7 @@ MonoBehaviour:
   spline: {fileID: 888325552}
   currentLap: 0
   splinePosition: 0
+  racePosition: 0
 --- !u!1 &1957786227
 GameObject:
   m_ObjectHideFlags: 0
@@ -9549,6 +9563,7 @@ MonoBehaviour:
   spline: {fileID: 888325552}
   currentLap: 0
   splinePosition: 0
+  racePosition: 0
 --- !u!1001 &3565092173842405008
 PrefabInstance:
   m_ObjectHideFlags: 0

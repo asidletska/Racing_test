@@ -5,12 +5,12 @@ using Unity.Mathematics;
 public class OrderInRacing : MonoBehaviour
 {
     public SplineContainer spline;
+
     public int currentLap = 0;
+    [Range(0,1)] public float splinePosition;
 
-    [Range(0f, 1f)]
-    public float splinePosition;
-
-    private float lastSplinePos;
+    private bool canCountLap = true;
+    [HideInInspector] public int racePosition;
 
     void Update()
     {
@@ -24,11 +24,20 @@ public class OrderInRacing : MonoBehaviour
         );
 
         splinePosition = t;
+    }
 
-        if (splinePosition < 0.1f && lastSplinePos > 0.9f)
-            currentLap++;
+    public void LapTriggerPassed()
+    {
+        if (!canCountLap) return;
 
-        lastSplinePos = splinePosition;
+        currentLap++;
+       // canCountLap = false;
+            //Invoke(nameof(ResetLapTrigger), 2f); 
+    }
+
+    void ResetLapTrigger()
+    {
+        canCountLap = true;
     }
 
     public float GetRaceProgress()

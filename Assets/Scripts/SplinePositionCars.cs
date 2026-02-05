@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class SplinePositionCars : MonoBehaviour
 {
-    public List<OrderInRacing> racers;
+    public List<OrderInRacing> racers = new List<OrderInRacing>();
 
     void Update()
     {
-        racers = racers
-            .OrderByDescending(r => r.GetRaceProgress())
-            .ToList();
+        racers.Sort(CompareProgress);
 
         for (int i = 0; i < racers.Count; i++)
         {
-            Debug.Log(racers[i].name + " Position: " + (i + 1));
+            racers[i].racePosition = i + 1;
         }
+    }
+
+    int CompareProgress(OrderInRacing a,OrderInRacing b)
+    {
+        return b.GetRaceProgress().CompareTo(a.GetRaceProgress());
     }
 }
