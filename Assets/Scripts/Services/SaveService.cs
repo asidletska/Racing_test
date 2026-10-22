@@ -3,31 +3,32 @@ using System.IO;
 
 public class SaveService : MonoBehaviour
 {
-    private string Path => Application.persistentDataPath + "/save.json";
-    public SaveData Data;
+    private string SavePath => Path.Combine(Application.persistentDataPath, "save.json");
 
-    public SaveService()
+    public SaveData Data { get; private set; }
+
+    private void Awake()
     {
         Load();
     }
 
     public void Save()
     {
+        if (Data == null) Data = new SaveData();
+
         string json = JsonUtility.ToJson(Data, true);
-        File.WriteAllText(Path, json);
+        File.WriteAllText(SavePath, json);
     }
 
     public void Load()
     {
-        if (File.Exists(Path))
+        if (File.Exists(SavePath))
         {
-            string json = File.ReadAllText(Path);
+            string json = File.ReadAllText(SavePath);
             Data = JsonUtility.FromJson<SaveData>(json);
         }
-        else
-        {
+
+        if (Data == null)
             Data = new SaveData();
-            Save();
-        }
     }
 }

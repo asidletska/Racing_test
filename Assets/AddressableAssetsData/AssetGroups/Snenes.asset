@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Snenes
+  m_EditorClassIdentifier: 
+  m_GroupName: Snenes
+  m_Data:
+    m_SerializedData: []
+  m_GUID: bc518a32de337433b873c1cbbc31019b
+  m_SerializeEntries:
+  - m_GUID: 06e49ef890c2143459e77f91cb6b8c0f
+    m_Address: LoadingScene 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 252d34f7c660441339b89e7f17a7271e
+    m_Address: Garage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55357f48a3e2b4643b0983826b854f64
+    m_Address: s1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
+    m_Address: Menu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3e28f90612264cd4b1ebd5bef37beed
+    m_Address: LoadingScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e6026551a1cfd437281c490dec20f44a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9297f9800071f4e3895f64dbbb452c82, type: 2}
+    - {fileID: 11400000, guid: 9048281073b20499dbfb6ef7bac47b4c, type: 2}

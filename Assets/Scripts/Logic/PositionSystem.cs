@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class PositionSystem : MonoBehaviour
 {
-    private List<Transform> racers = new();
+    private readonly List<Transform> racers = new();
 
-    public void Register(Transform racer)
+    public void RegisterRacer(Transform racer)
     {
+        if (racer == null) return;
+        if (racers.Contains(racer)) return;
+
         racers.Add(racer);
     }
 
     public int GetPosition(Transform racer)
     {
-        var sorted = racers.OrderByDescending(r => r.position.z).ToList();
-        return sorted.IndexOf(racer) + 1;
-    }
+        if (racer == null) return racers.Count;
 
-    public void RegisterRacer(Transform playerCarTransform)
-    {
-        throw new System.NotImplementedException();
+        var sorted = racers
+            .OrderByDescending(r =>
+            {
+                var o = r.GetComponent<OrderInRacing>();
+                if (o != null) return o.GetRaceProgress();
+
+                return r.position.z;
+            })
+            .ToList();
+
+        return sorted.IndexOf(racer) + 1;
     }
 }

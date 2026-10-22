@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ad7e183c5f34fe0b2ceee3b1699e80, type: 3}
+  m_Name: car1
+  m_EditorClassIdentifier: 
+  cars:
+  - displayName: Chevrole
+    price: 0
+    carIndex: 0
+    previewPrefab: {fileID: 5608129993520415593, guid: 5cf9450264d3c4926ba89f7b3f57225c, type: 3}
+  - displayName: Chevrole
+    price: 1000
+    carIndex: 1
+    previewPrefab: {fileID: 3311311803080157842, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  - displayName: Chevrole
+    price: 2000
+    carIndex: 2
+    previewPrefab: {fileID: 5608129993520415593, guid: e22728cad55a44a04bc534aa4a866f35, type: 3}

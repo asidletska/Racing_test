@@ -10,7 +10,7 @@ public class MenuState : IState
 
     public void Enter()
     {
-        ServiceLocator.Get<SceneLoader>().Load("Menu");
+        ServiceLocator.Get<SceneLoader>().LoadScene("Menu");
     }
 
     public void Exit() { }

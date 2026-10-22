@@ -12,7 +12,7 @@ public class SplinePositionCars : MonoBehaviour
 
         for (int i = 0; i < racers.Count; i++)
         {
-            racers[i].racePosition = i + 1;
+            racers[i].splinePosition = i + 1;
         }
     }
 

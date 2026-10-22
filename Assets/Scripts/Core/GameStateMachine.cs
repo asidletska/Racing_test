@@ -21,4 +21,9 @@ public class GameStateMachine
         _activeState = _states[typeof(T)];
         _activeState.Enter();
     }
+    
+    public T GetState<T>() where T : IState
+    {
+        return (T)_states[typeof(T)];
+    }
 }
